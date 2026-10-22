@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: #1f2430;
+  color: #e8eaf0;
+}
+
+.game {
+  text-align: center;
+  padding: 2rem;
+}
+
+h1 {
+  margin: 0 0 0.5rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.status {
+  margin: 0 0 1rem;
+  min-height: 1.5rem;
+  font-size: 1.1rem;
+  color: #aab3c5;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 96px);
+  grid-template-rows: repeat(3, 96px);
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.cell {
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: inherit;
+  color: #e8eaf0;
+  background: #2b3346;
+  border: 1px solid #3a445c;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.cell:hover:not(.taken) {
+  background: #35405a;
+}
+
+.cell.taken {
+  cursor: default;
+}
+
+.cell.win {
+  background: #2f6f4f;
+  border-color: #4caf87;
+}
+
+#reset {
+  font: inherit;
+  padding: 0.5rem 1.25rem;
+  color: #e8eaf0;
+  background: #3d4a66;
+  border: 1px solid #4d5c7d;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#reset:hover {
+  background: #47567a;
+}
