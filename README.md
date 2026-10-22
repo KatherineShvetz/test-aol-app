@@ -4,13 +4,24 @@ A zero-dependency tic-tac-toe game in plain HTML/CSS/JS. Nothing to install, no 
 
 ## Run
 
-Open `index.html` directly in a browser, or serve it statically:
+Open `index.html` directly in a browser, or serve it statically.
+
+**Important:** run the server from the repository root (the folder that contains `index.html`), otherwise the server has no page to show.
 
 ```sh
-python3 -m http.server
+# from the repo root (the folder containing index.html):
+python3 -m http.server 8000
 ```
 
-Then visit <http://localhost:8000>.
+If port 8000 is already in use, the server exits with `Address already in use` — pick another port, e.g. `python3 -m http.server 8080`, and visit the matching URL.
+
+Then visit <http://localhost:8000> (or the port you chose).
+
+### Troubleshooting
+
+- **Blank page or "File not found" / directory listing:** you started the server from the wrong folder. Stop it (Ctrl+C), `cd` to the folder containing `index.html`, and start it again.
+- **`Address already in use`:** port 8000 is taken; use another port (see above).
+- **Prefer Node?** `npx serve .` also works from the repo root.
 
 ## Test
 
